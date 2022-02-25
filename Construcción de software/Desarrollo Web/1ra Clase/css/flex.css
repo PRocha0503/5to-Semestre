@@ -1,0 +1,36 @@
+div {
+	border: 1px black solid;
+	border-radius: 20px;
+	background: white;
+}
+* {
+	border: 1px black solid;
+	padding: 2%;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	margin-top: 4px;
+}
+
+.box {
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+#container1 {
+	justify-content: space-between;
+}
+
+#box4 {
+	flex: 1;
+}
+
+#box5 {
+	flex: 3;
+}
+
+#box6 {
+	flex: 4;
+}

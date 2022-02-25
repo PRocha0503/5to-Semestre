@@ -1,0 +1,96 @@
+.flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+}
+#navbar {
+	background: rgb(78, 78, 78);
+}
+
+#title {
+	color: white;
+	margin-left: 10px;
+}
+
+#info {
+	margin-left: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.flex p {
+	color: white;
+	margin-left: 10px;
+}
+
+body {
+	margin: 0;
+}
+
+.main {
+	background: rgb(211, 126, 15);
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main h1 {
+	margin-left: 0;
+	text-align: center;
+}
+.main p {
+	margin-left: 0;
+	text-align: center;
+	color: white;
+}
+
+h1 {
+	color: white;
+}
+.half {
+	width: 50%;
+}
+
+.low {
+	height: 460;
+	display: flex;
+	justify-content: center;
+	background: rgb(109, 108, 106);
+}
+h3 {
+	color: white;
+}
+
+input {
+	height: 50%;
+	margin: 10px;
+}
+button {
+	background: rgb(206, 146, 16);
+	color: white;
+	height: 50%;
+	margin: 10px;
+}
+
+#below {
+	color: black;
+}
+
+footer {
+	height: 50px;
+	background: rgb(109, 108, 106);
+	display: flex;
+	justify-content: center;
+}
+footer p {
+	color: white;
+}
+
+#padding {
+	padding: 10px;
+}
+
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
