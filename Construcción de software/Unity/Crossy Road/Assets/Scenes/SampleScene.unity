@@ -237,7 +237,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1337033766}
   offset: {x: 1, y: 0, z: 0}
-  scoreText: {fileID: 0}
 --- !u!4 &829392198
 Transform:
   m_ObjectHideFlags: 0
@@ -416,6 +415,7 @@ GameObject:
   - component: {fileID: 1764824706}
   - component: {fileID: 1764824708}
   - component: {fileID: 1764824707}
+  - component: {fileID: 1764824709}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -484,6 +484,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764824705}
   m_CullTransparentMesh: 1
+--- !u!114 &1764824709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764824705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 736d1a6ec4b6f1e70b5562db13e7b9e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoreText: {fileID: 1764824707}
 --- !u!1 &1861949991
 GameObject:
   m_ObjectHideFlags: 0
