@@ -18,19 +18,17 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Makes an enemy every 1 second
-        InvokeRepeating("MakeEnemy",1,1);
+        // //Makes an enemy every 1 second
+        InvokeRepeating("MakeEnemy",1,0.5f);
         //Player position
         playerPos = GameObject.FindWithTag("Player").transform;
 
-        points = Chiken.getPoints();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-
     }
 
     //Method to create new enemy

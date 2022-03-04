@@ -9,7 +9,7 @@ public class Chiken : MonoBehaviour
         float x = -11;
         float y = 0;
         //Points and lives
-        [SerializeField] public static float points = 0;
+        [SerializeField] public static float points = 1;
         [SerializeField] int lives = 3;
 
         
