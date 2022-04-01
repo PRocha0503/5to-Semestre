@@ -16,12 +16,12 @@
     )
     (if (empty? chars) 
     ;;; (member state (dfa-str-accept-states dfa))
-        (if (member state (dfa-str-accept-states dfa)) (append result (list state)) #f)
+        (if (member state (dfa-str-accept-states dfa)) (reverse (cons state result)) #f)
         (let-values ([(token state) ((dfa-str-transitions dfa) state (car chars))]) 
         (loop 
         state 
         (cdr chars)
-        (if token (append result (list token)) result)
+        (if token (cons token result) result)
         )) 
     ))
 )
