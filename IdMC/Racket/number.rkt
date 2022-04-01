@@ -8,7 +8,7 @@
 
 (define(automatas-1 dfa string) 
     "Evaluar si un string es valido deacuerdo al DFA"
-    (trace-let loop 
+    (let loop 
     (
         [state (dfa-str-initial-state dfa)] 
         [chars (string->list string)]
@@ -31,6 +31,7 @@
     (case state 
         [("start") (cond 
             [(char-numeric? character) "int"]
+            [(or (char-alphabetic? character) (eq? character #\_)) "var"]
             [(sign? character) "n_sign"]
             [else "fail"])]
         [("n_sign") (cond 
@@ -45,8 +46,14 @@
             [else "fail"]
         )
         ]
+        [("var") (cond 
+            [(or (char-alphabetic? character) (eq? character #\_) (char-numeric? character)) "var"]
+            [(operator? character) "op"]
+            [else "fail"]
+        )]
         [("op") (cond 
             [(char-numeric? character) "int"]
+            [(or (char-alphabetic? character) (eq? character #\_)) "var"]
             [(sign? character) "n_sign"]
             [else "fail"]
         )]
@@ -55,8 +62,8 @@
 )
 
 
-(automatas-1 (dfa-str "start" '("int") delta-arithmetic-1) "-3")
-(automatas-1 (dfa-str "start" '("int") delta-arithmetic-1) "-3+*3")
-(automatas-1 (dfa-str "start" '("int") delta-arithmetic-1) "3*6")
-(automatas-1 (dfa-str "start" '("int") delta-arithmetic-1) "ab")
+(automatas-1 (dfa-str "start" '("int" "var") delta-arithmetic-1) "-3")
+(automatas-1 (dfa-str "start" '("int" "var") delta-arithmetic-1) "-3+*3")
+(automatas-1 (dfa-str "start" '("int" "var") delta-arithmetic-1) "3*6")
+(automatas-1 (dfa-str "start" '("int" "var") delta-arithmetic-1) "ab")
 
